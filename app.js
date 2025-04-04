@@ -19,10 +19,7 @@ const __dirname = path.resolve();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-    origin: "https://convosphere-chat.vercel.app" || "http://localhost:5173",
-    credentials: true
-}));
+app.use(cors());
 
 
 app.use('/api/auth', authRoutes);
